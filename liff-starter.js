@@ -101,4 +101,11 @@ function registerButtonHandlers() {
             liff.login();
         }
     })
+
+    document.getElementById('liffLogoutButton').addEventListener('click', () => {
+        if (liff.isLoggedIn()) {
+            liff.logout();
+            window.location.reload();
+        }
+    })
 }
