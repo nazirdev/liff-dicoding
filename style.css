@@ -1,3 +1,7 @@
+.hidden {
+    display: none;
+}
+
 #nextcok {
     pointer-events: none;
 }
