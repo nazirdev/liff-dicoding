@@ -134,7 +134,7 @@ document.getElementById('cek').addEventListener('click', () => {
     } else {
         liff.sendMessages([{
             'type': 'text',
-            'text': "Catatan baru berhasil disimpan"
+            'text': "Transaksi berhasil"
         }]).then(function() {
             alert('Catatan Tersimpan');
         }).catch(function(error) {
