@@ -44,7 +44,7 @@ function insertItemToProduct(product) {
         <tr class>
             <td>${product.no}</td>
             <td><img src='${product.img}' style="width: 50px;"></td>
-            <td>${product.name}</td>
+            <td class='nama-product'>${product.name}</td>
             <td>
                 <a class='btn btn-primary addE' data-id='${product.iddata}'>
                     <span id='nextcok' class='fa fa-chevron-up' data-id='${product.iddata}'></span>
@@ -54,7 +54,7 @@ function insertItemToProduct(product) {
                     <span id='backcok' class='fa fa-chevron-down' data-id='${product.iddata}'></span>
                 </button>
             </td>
-            <td>${product.price}</td>
+            <td id='pricex'>${product.price}</td>
             <td><button class='btn btn-danger deleteItem' data-id='${product.iddata}'><span id='trachcok' class='fa fa-trash' data-id='${product.iddata}'></span></button></td>
         </tr>
     `;
@@ -87,7 +87,7 @@ modalCart.addEventListener('click', (event) => {
         let tempItem = cart.find(item => item.iddata === id);
         tempItem.quantity = tempItem.quantity + 1
         setCartValue(cart);
-        console.log(addMount.nextElementSibling.innerHTML = tempItem.quantity)
+        addMount.nextElementSibling.innerHTML = tempItem.quantity
     }else if (event.target.classList.contains('backE')) {
         let lowAmount = event.target;
         let id = lowAmount.dataset.id;
@@ -119,3 +119,26 @@ function removeItems(id){
 function getSingleButton(id) {
     return btnDOM.find(button => button.dataset.id === id);
 }
+
+
+let harga = 0
+document.getElementById('cek').addEventListener('click', () => {
+    let makanan = cart.filter(item => item)
+    for(let i = 0; i < makanan.length; i++) {
+        harga += parseInt(makanan[i].price)
+    }
+    // console.log(harga)
+
+    if (!liff.isInClient()) {
+        senAlertNotification();
+    } else {
+        liff.sendMessages([{
+            'type': 'text',
+            'text': "Catatan baru berhasil disimpan"
+        }]).then(function() {
+            alert('Catatan Tersimpan');
+        }).catch(function(error) {
+            alert('Aduh kok error ya...');
+        });
+    }
+})

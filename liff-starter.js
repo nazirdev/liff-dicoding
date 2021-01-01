@@ -113,3 +113,7 @@ function registerButtonHandlers() {
         document.getElementById('products').style.display = 'none';
     }
 }
+
+document.getElementById('cek').addEventListener('click', () => {
+    
+})
