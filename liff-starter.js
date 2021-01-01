@@ -108,4 +108,8 @@ function registerButtonHandlers() {
             window.location.reload();
         }
     })
+
+    if (liff.isLoggedIn()) {
+        document.getElementById('products').style.display = 'none';
+    }
 }
