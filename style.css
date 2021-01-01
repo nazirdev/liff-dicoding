@@ -1,0 +1,79 @@
+#nextcok {
+    pointer-events: none;
+}
+
+#backcok {
+    pointer-events: none;
+}
+
+#trachcok {
+    pointer-events: none;
+}
+
+.fa-chevron-up {
+    display: none;
+}
+
+.card-img-top {
+    width: 40%;
+    margin: auto;
+    padding: 5%;
+}
+
+#img-modal-style {
+    width: 30px;
+}
+
+#cart-link {
+    cursor: pointer;
+}
+
+.img-modal {
+    display: none;
+}
+
+#id-data {
+    display: none;
+}
+
+.fa-trash {
+    display: block;
+}
+
+#code-block {
+    background-color: #eee;
+    border: 1px solid #999;
+    display: block;
+    padding: 20px;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+#profilePictureDiv {
+    text-align: center;
+}
+
+#profileImageDiv {
+    height: 100px;
+    width: 100px;
+}
+
+#statusMessage {
+    position: relative;
+    top: 40px;
+}
+
+.textLeft {
+    text-align: left;
+}
+
+.buttonGroup {
+    padding-top: 20px;
+}
+
+.hidden {
+    display: none;
+}
