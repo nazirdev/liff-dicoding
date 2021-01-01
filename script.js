@@ -134,7 +134,7 @@ document.getElementById('cek').addEventListener('click', () => {
     } else {
         liff.sendMessages([{
             'type': 'text',
-            'text': "anda membeli makanan dengan total " + harga;
+            'text': "anda membeli makanan dengan total " + harga
         }]).then(function() {
             alert('Transaksi Tersimpan');
         }).catch(function(error) {
