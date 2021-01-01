@@ -109,9 +109,9 @@ function registerButtonHandlers() {
         }
     })
 
-    if (liff.isLoggedIn()) {
-        document.getElementById('products').style.display = 'none';
-    }
+    // if (liff.isLoggedIn()) {
+    //     document.getElementById('products').style.display = 'none';
+    // }
 }
 
 document.getElementById('cek').addEventListener('click', () => {
