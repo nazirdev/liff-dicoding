@@ -141,4 +141,5 @@ document.getElementById('cek').addEventListener('click', () => {
             alert('Aduh kok error ya...');
         });
     }
+    window.location.reload()
 })
