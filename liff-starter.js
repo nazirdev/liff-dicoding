@@ -109,12 +109,10 @@ function registerButtonHandlers() {
 
     if (liff.isLoggedIn()) {
         let productContainer = document.getElementById('products-contaier');
-        let navActive = document.getElementById('navaktif');
         let onBoarding = document.getElementById('onBoarding')
 
         productContainer.classList.remove('hidden');
         onBoarding.classList.add('hidden');
-        navActive.classList.remove('disabled')
     }
 }
 
