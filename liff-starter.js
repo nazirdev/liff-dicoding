@@ -57,7 +57,7 @@ function initializeLiff(myLiffId) {
             document.getElementById("liffInitErrorMessage").classList.remove('hidden');
         });
 }
- 
+
 /**
  * Initialize the app by calling functions handling individual app components
  */
