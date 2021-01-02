@@ -126,7 +126,7 @@ function registerButtonHandlers() {
         productContainer.classList.remove('hidden');
 
         liff.getProfile().then(function(profil){
-            console.log(profil.displayName)
+            userName.innerText = profil.displayName;
             imgProfile.setAttribute('src', profil.pictureUrl)
         }).catch(function(error) {
             console.log('Error getting profile: ' + error);
