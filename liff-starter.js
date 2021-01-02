@@ -119,6 +119,7 @@ function registerButtonHandlers() {
         let onBoarding = document.getElementById('onBoarding');
         let userName = document.getElementById('userName');
         let imgProfile = document.getElementById('imgProfile');
+        let textname = document.querySelector('.textname');
         document.getElementById('nav-new').classList.remove('hidden')
 
         // console.log(imgProfile.setAttribute('src', ''))
@@ -127,7 +128,8 @@ function registerButtonHandlers() {
 
         liff.getProfile().then(function(profil){
             userName.innerText = profil.displayName;
-            imgProfile.setAttribute('src', profil.pictureUrl)
+            imgProfile.setAttribute('src', profil.pictureUrl);
+            textname.textContent = profil.displayName;
         }).catch(function(error) {
             console.log('Error getting profile: ' + error);
         });
