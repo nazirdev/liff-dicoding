@@ -113,8 +113,11 @@ function registerButtonHandlers() {
 
         productContainer.classList.remove('hidden');
         onBoarding.classList.add('hidden');
+
+        liff.getProfile().then(function(profil){
+            console.log(profil.displayName)
+        }).catch(function(error) {
+            console.log('Error getting profile: ' + error);
+        });
     }
 }
-
-let navActive = document.getElementById('navaktif')
-console.log(navActive)
