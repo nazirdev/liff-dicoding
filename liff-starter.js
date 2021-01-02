@@ -112,10 +112,12 @@ function registerButtonHandlers() {
         let onBoarding = document.getElementById('onBoarding');
         let userName = document.getElementById('userName');
         let imgProfile = document.getElementById('imgProfile');
+        let nav = document.getElementById('navigation');
 
         // console.log(imgProfile.setAttribute('src', ''))
         onBoarding.classList.add('hidden');
         productContainer.classList.remove('hidden');
+        nav.classList.remove('hidden');
 
         liff.getProfile().then(function(profil){
             userName.innerText = profil.displayName;
