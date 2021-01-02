@@ -107,6 +107,13 @@ function registerButtonHandlers() {
         }
     })
 
+    document.getElementById('openWindowButton').addEventListener('click', () => {
+        liff.openWindow({
+            url: 'https://foodieliff.herokuapp.com/', // Isi dengan Endpoint URL aplikasi web Anda
+            external: true
+        });
+    })
+
     if (liff.isLoggedIn()) {
         let productContainer = document.getElementById('products-contaier');
         let onBoarding = document.getElementById('onBoarding');
@@ -125,13 +132,4 @@ function registerButtonHandlers() {
             console.log('Error getting profile: ' + error);
         });
     }
-}
-
-function registerButtonHandlers() {
-    document.getElementById('openWindowButton').addEventListener('click', () => {
-        liff.openWindow({
-            url: 'https://foodieliff.herokuapp.com/', // Isi dengan Endpoint URL aplikasi web Anda
-            external: true
-        });
-    })
 }
