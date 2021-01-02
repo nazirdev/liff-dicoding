@@ -109,7 +109,9 @@ function registerButtonHandlers() {
 
     if (liff.isLoggedIn()) {
         let productContainer = document.getElementById('products-contaier');
+        let onBoarding = document.getElementById('onBoarding');
 
+        onBoarding.classList.add('hidden');
         productContainer.classList.remove('hidden');
 
         liff.getProfile().then(function(profil){
