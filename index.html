@@ -21,7 +21,8 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-link pointer active" data-toggle="modal" data-target="#modalSaya" id="cart-link">Chart
+                    <a class="nav-link pointer active disabled" id="navaktif" data-toggle="modal"
+                        data-target="#modalSaya" id="cart-link">Chart
                         <span class="cart-items">0</span>
                     </a>
                     <a class="nav-link active" href="#">About</a>
@@ -30,7 +31,7 @@
             </div>
         </div>
     </nav>
-    <div class="container">
+    <div class="container hidden" id="products-contaier">
         <div class="row mt-2" id="products">
             <div class="col-xl-4 col-md-6 col-sm-10">
                 <div class="card mb-2 shadow">
@@ -112,6 +113,8 @@
     </div>
 
     <div class="container">
+        <h3>Selamat Datang di FoodieID</h3>
+        <p>Silahkan Login dahulu, untuk menggunakan layanan kami, terimakasih : )</p>
         <div id="liffAppContent">
             <!-- ACTION BUTTONS -->
             <div class="buttonGroup">
@@ -120,11 +123,10 @@
                     <button id="closeWindowButton" class="btn btn-danger btn-small">Close LIFF App</button>
                     <button id="sendMessageButton" class="btn btn-warning btn-small">Send Message</button>
                 </div>
-
             </div>
 
             <!-- LIFF DATA -->
-            <div id="liffData">
+            <div id="liffData" class="hidden">
                 <h3 id="liffDataHeader" class="textLeft">Informasi:</h3>
                 <table>
                     <tr>
@@ -144,7 +146,7 @@
             </div>
             <div id="statusMessage">
                 <div id="isInClientMessage"></div>
-                <div id="apiReferenceMessage">
+                <div id="apiReferenceMessage" class="hidden">
                     <p>Available LIFF methods vary depending on the browser you use to open the LIFF app.</p>
                     <p>Please refer to the <a
                             href="https://developers.line.biz/en/reference/liff/#initialize-liff-app">API

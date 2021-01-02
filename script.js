@@ -11,7 +11,6 @@ let no = 1;
 let btnsAdd = [...document.querySelectorAll('.btn-add')];
 btnDOM = btnsAdd;
 btnsAdd.forEach(btnAdd => {
-    no++
     let id = btnAdd.dataset.id
     let isCart = cart.find(item => item.id === id);
 
@@ -26,6 +25,7 @@ btnsAdd.forEach(btnAdd => {
 
         const productDOM = btnAdd.parentNode.parentNode
         const product = {
+            no: no++,
             iddata: productDOM.querySelector('#id-data').innerHTML,
             img: productDOM.querySelector('#product-img').getAttribute('src'),
             name: productDOM.querySelector('#product-name').innerHTML,

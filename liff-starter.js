@@ -90,8 +90,6 @@ function displayIsInClientInfo() {
         document.getElementById('liffLoginButton').classList.toggle('hidden');
         document.getElementById('liffLogoutButton').classList.toggle('hidden');
         document.getElementById('isInClientMessage').textContent = 'You are opening the app in the in-app browser of LINE.';
-    } else {
-        document.getElementById('isInClientMessage').textContent = 'You are opening the app in an external browser.';
     }
 }
 
@@ -109,11 +107,11 @@ function registerButtonHandlers() {
         }
     })
 
-    // if (liff.isLoggedIn()) {
-    //     document.getElementById('products').style.display = 'none';
-    // }
+    if (liff.isLoggedIn()) {
+        let productContainer = document.getElementById('products-contaier');
+        let navActive = document.getElementById('navaktif');
+         
+        productContainer.classList.remove('hidden')
+        navActive.classList.remove('hidden')
+    }
 }
-
-document.getElementById('cek').addEventListener('click', () => {
-    
-})
