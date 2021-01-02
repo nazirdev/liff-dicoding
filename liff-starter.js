@@ -126,3 +126,12 @@ function registerButtonHandlers() {
         });
     }
 }
+
+function registerButtonHandlers() {
+    document.getElementById('openWindowButton').addEventListener('click', () => {
+        liff.openWindow({
+            url: 'https://foodieliff.herokuapp.com/', // Isi dengan Endpoint URL aplikasi web Anda
+            external: true
+        });
+    })
+}
