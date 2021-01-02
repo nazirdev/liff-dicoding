@@ -119,7 +119,7 @@ function registerButtonHandlers() {
 
         liff.getProfile().then(function(profil){
             userName.innerText = profil.displayName;
-            console.log(profil)
+            imgProfile.setAttribute('src', profil.pictureUrl)
         }).catch(function(error) {
             console.log('Error getting profile: ' + error);
         });
