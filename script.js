@@ -121,25 +121,27 @@ function getSingleButton(id) {
 }
 
 
-let harga = 0
+let totalHarga = 0;
+let makanan = "";
+let qty = 0
 document.getElementById('cek').addEventListener('click', () => {
-    let makanan = cart.filter(item => item)
-    for(let i = 0; i < makanan.length; i++) {
-        harga += parseInt(makanan[i].price)
-    }
-    // console.log(harga)
+    cart.map(item => {
+        totalHarga += item.price * item.quantity
+        makanan += item.name + ", "
+        qty += item.quantity
+    })
+    // console.log()
 
     if (!liff.isInClient()) {
         senAlertNotification();
     } else {
         liff.sendMessages([{
             'type': 'text',
-            'text': "anda membeli makanan dengan total " + harga
+            'text': `Anda telah membeli ${qty} makanan diantaranya ${makanan} dengan total harga ${totalHarga}`
         }]).then(function() {
             alert('Transaksi Tersimpan');
         }).catch(function(error) {
             alert('Aduh kok error ya...');
         });
     }
-    window.location.reload()
 })
