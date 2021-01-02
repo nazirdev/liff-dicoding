@@ -110,8 +110,13 @@ function registerButtonHandlers() {
     if (liff.isLoggedIn()) {
         let productContainer = document.getElementById('products-contaier');
         let navActive = document.getElementById('navaktif');
+        let onBoarding = document.getElementById('onBoarding')
          
-        productContainer.classList.remove('hidden')
-        navActive.classList.remove('hidden')
+        productContainer.classList.remove('hidden');
+        navActive.classList.remove('disabled');
+        onBoarding.classList.add('hidden');
     }
 }
+
+let navActive = document.getElementById('navaktif')
+console.log(navActive)
